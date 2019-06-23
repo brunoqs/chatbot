@@ -1,28 +1,24 @@
-import io
 import os
 import random
 import string
 import warnings
-import numpy as np
+import nltk
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-import warnings
-import nltk
-from nltk.stem import WordNetLemmatizer
 
-
-GREETING_INPUTS = ("ola", "oi", "como vai",)
-GREETING_RESPONSES = ["ola", "oi", "100%", ]
+GREETING_INPUTS = ["ola", "oi", "opa", "eae"]
+GREETING_RESPONSES = ["ola", "oi", "opa", "eae"]
 
 class Chatbot:
 
     def __init__(self):
         nltk.download('popular', quiet=True)
+        warnings.filterwarnings('ignore')
 
         self.sent_tokens = []
         self.stopwords = nltk.corpus.stopwords.words('portuguese')
         self.remove_punct_dict = dict((ord(punct), None) for punct in string.punctuation)
-        self.lemmer =  WordNetLemmatizer()
+        self.lemmer =  nltk.stem.WordNetLemmatizer()
 
         self.sent_tokens.extend(self.load_sentences('corpora/tecnologia/'))
         self.sent_tokens.extend(self.load_sentences('corpora/mercado/'))
@@ -50,7 +46,7 @@ class Chatbot:
                 return random.choice(GREETING_RESPONSES)
 
     def response(self, user_request):
-        robo_response = ''
+        bot_response = ''
         self.sent_tokens.append(user_request)
         TfidfVec = TfidfVectorizer(tokenizer=self.lem_normalize, stop_words=self.stopwords)
         tfidf = TfidfVec.fit_transform(self.sent_tokens)
@@ -59,9 +55,10 @@ class Chatbot:
         flat = vals.flatten()
         flat.sort()
         req_tfidf = flat[-2]
+
         if(req_tfidf == 0):
-            robo_response = robo_response + "Desculpe, não consigo entender essa pergunta"
-            return robo_response
+            bot_response = bot_response + "Desculpe, não consigo entender essa pergunta"
+            return bot_response
         else:
-            robo_response = robo_response + self.sent_tokens[idx]
-            return robo_response
+            bot_response = bot_response + self.sent_tokens[idx]
+            return bot_response
