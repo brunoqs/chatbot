@@ -102,3 +102,12 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# corpus
+corpora/mercado/
+corpora/saude/
+corpora/tecnologia/
+corpora/telefonia/
+
+#vscode
+.vscode/
