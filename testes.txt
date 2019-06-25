@@ -1,0 +1,34 @@
+Pergunta: politica
+BOT: Pensando...
+BOT: Se a sua resposta for apelo ao comunismo, eu não discuto politica.
+[15.0 segundos]
+
+Pergunta: o que você vai fazer diante a situação da saúde brasileira?
+BOT: Pensando...
+BOT: Como fazer?
+[12.7 segundos]
+
+Pergunta: Qual o melhor sistema operacional, linux ou windows?
+BOT: Pensando...
+BOT: "Usuário Windows desde meu primeiro computador, nunca tive grande interesse em usar outro sistema operacional.
+[12.6 segundos]
+
+Pergunta: linux ou ruindows?
+BOT: Pensando...
+BOT: Muito provavelmente o Linux.
+[12.6 segundos]
+
+Pergunta: fala papai, preveja meu futuro
+BOT: Pensando...
+BOT: Chinês não fala.
+[12.7 segundos]
+
+Pergunta: bitcoin e promissor?          
+BOT: Pensando...
+BOT: “É promissor, mas ainda muito inicial.
+[12.6 segundos]
+
+Pergunta: como vai?
+BOT: Pensando...
+BOT: Não vai.
+[12.7 segundos]
