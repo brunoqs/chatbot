@@ -1,6 +1,6 @@
 # Diretório ```/corpora```
 
-Ficam aqui os corpus do utilizado pelo chatbot.
+Ficam aqui os corpora utilizado pelo chatbot.
 
 ```
 .
@@ -8,9 +8,7 @@ Ficam aqui os corpus do utilizado pelo chatbot.
       ├── mercado     
       ├── saude       
       ├── tecnologia
-      ├── telefonia       
-      └── README.md
-
+      └── telefonia       
 ```
 
 ## Baixando Córpus Compilado
